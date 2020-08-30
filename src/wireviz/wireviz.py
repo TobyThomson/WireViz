@@ -179,7 +179,7 @@ def parse(yaml_input, file_out=None, generate_bom=False):
         else:
             raise Exception('Wrong number of connection parameters')
 
-    harness.output(filename=file_out, fmt=('png', 'svg'), gen_bom=generate_bom, view=False)
+    harness.output(filename=file_out, fmt='png', gen_bom=generate_bom, view=False)
 
 
 def parse_file(yaml_file, file_out=None, generate_bom=False):

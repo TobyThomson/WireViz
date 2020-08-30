@@ -216,10 +216,10 @@ class Harness:
     def output(self, filename, directory='_output', view=False, cleanup=True, fmt='pdf', gen_bom=False):
         # graphical output
         graph = self.create_graph()
-        for f in fmt:
-            graph.format = f
-            graph.render(filename=filename, directory=directory, view=view, cleanup=cleanup)
-        graph.save(filename=f'{filename}.gv', directory=directory)
+        graph.format = fmt
+        graph.render(filename=filename, directory=directory, view=view, cleanup=cleanup)
+        
+        '''graph.save(filename=f'{filename}.gv', directory=directory)
         # bom output
         bom_list = self.bom_list()
         with open(f'{filename}.bom.tsv', 'w') as file:
@@ -248,7 +248,7 @@ class Harness:
                 file.write('</tr>')
             file.write('</table>')
 
-            file.write('</body></html>')
+            file.write('</body></html>')'''
 
     def bom(self):
         bom = []
