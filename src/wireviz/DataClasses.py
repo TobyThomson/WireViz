@@ -74,6 +74,9 @@ class Cable:
     color_code: Optional[str] = None
     show_name: bool = True
     show_wirecount: bool = True
+    show_gauge: bool = True #TT added
+    part_no: Optional[str] = None #TT added
+    length_str: Optional[str] = None #TT added
 
     def __post_init__(self):
 
