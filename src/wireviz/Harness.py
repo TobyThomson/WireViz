@@ -124,10 +124,12 @@ class Harness:
                 elif cable.gauge_unit.upper() == 'AWG':
                     awg_fmt = f' ({mm2_equiv(cable.gauge)} mm\u00B2)'
 
-            attributes = [f'{len(cable.colors)}x' if cable.show_wirecount else '',
+            attributes = [f'{cable.part_no}' if cable.part_no else '', #TT added
+                          f'{len(cable.colors)}x' if cable.show_wirecount else '',
                           f'{cable.gauge} {cable.gauge_unit}{awg_fmt}' if cable.gauge else '',
-                          '+ S' if cable.shield else '',
-                          f'{cable.length} m' if cable.length > 0 else '']
+                          #'+ S' if cable.shield else '', #TT removed
+                          f'{cable.length} m' if cable.length > 0 else '',
+                          f'{cable.length_str}' if cable.length_str != None else '']
             attributes = list(filter(None, attributes))
 
             html = '<table border="0" cellspacing="0" cellpadding="0"><tr><td>'  # main table
