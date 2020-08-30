@@ -2,9 +2,10 @@
 # -*- coding: utf-8 -*-
 
 COLOR_CODES = {
-    'DIN': ['WH', 'BN', 'GN', 'YE', 'GY', 'PK', 'BU', 'RD', 'BK', 'VT'], # ,'GYPK','RDBU','WHGN','BNGN','WHYE','YEBN','WHGY','GYBN','WHPK','PKBN'],
+    'DIN': ['WH', 'BN', 'GN', 'YE', 'GY', 'PK', 'BU', 'RD', 'BK', 'VT'],
     'IEC': ['BN', 'RD', 'OG', 'YE', 'GN', 'BU', 'VT', 'GY', 'WH', 'BK'],
     'BW': ['BK', 'WH'],
+    'ALPHAWIRE COLOUR CODE D': ['BK', 'RD', 'WH', 'GN', 'OG','BU', 'BN', 'YE', 'VT', 'GY', 'PK'], #only first 11 shown. more colours avalible...
 }
 
 color_hex = {
