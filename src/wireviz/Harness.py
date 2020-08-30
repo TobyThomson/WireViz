@@ -208,7 +208,7 @@ class Harness:
                     to_string = f'{connection.to_name}:{connection.to_port}' if not to_ferrule else ''
                     html = html.replace(f'<!-- {connection.via_port}_out -->', to_string)
 
-            dot.node(cable.name, label=f'<{html}>', shape='box',
+            dot.node(str(cable.name), label=f'<{html}>', shape='box',
                      style='filled,dashed' if cable.category == 'bundle' else '', margin='0', fillcolor='white')
 
         return dot
